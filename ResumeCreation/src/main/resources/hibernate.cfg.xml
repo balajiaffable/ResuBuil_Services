@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD//EN"
+    "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+ 
+<hibernate-configuration>
+
+    <session-factory name="sessionFactory">
+ 	    <property name="hibernate.connection.pool_size">50</property>
+		<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+		<property name="hibernate.transaction.factory_class">org.hibernate.transaction.JDBCTransactionFactory</property>
+	<!--<property name="hibernate.cache.use_query_cache">true</property>
+	 	<property name="hibernate.cache.use_second_level_cache">true</property>
+		<property name="hibernate.cache.provider_class">net.sf.ehcache.hibernate.EhCacheProvider</property> 
+		<property name="hibernate.cache.region.factory_class">net.sf.ehcache.hibernate.EhCacheRegionFactory</property>
+		-->	
+		<property name="hibernate.hbm2ddl.auto">create</property>
+		<property name="hibernate.show_sql">false</property>
+		<property name="hibernate.format_sql">false</property>
+		<property name="hibernate.use_sql_comments">false</property>
+		<property name="hibernate.jdbc.batch_size">0</property>
+		<property name="hibernate.validator.apply_to_ddl">false</property>
+		<property name="hibernate.validator.autoregister_listeners">false</property>
+		<property name="hibernate.default_schema">resumebuilder</property>
+		<property name="show_sql">true</property>
+		
+		
+		<!-- <mapping class="com.java.resumecreation.peresisitance.CertificationDetails"></mapping> 
+		<mapping class="com.java.resumecreation.peresisitance.CertificationDetailLst"></mapping> 
+         --><!-- <mapping class="com.junglebrick.java.persistance.Address"></mapping> -->
+        <!-- <mapping class="com.pocrest.java.persistence.ServerInformation"></mapping>
+        <mapping class="com.pocrest.java.persistence.ServerCaptureDetails"></mapping> -->
+        
+        
+        
+        <mapping class="com.java.resumecreation.peresisitance.RegistrationDetails"></mapping> 
+        <mapping class="com.java.resumecreation.peresisitance.PersonalDetails"></mapping> 
+        <mapping class="com.java.resumecreation.peresisitance.EducationExperience"></mapping>
+        <mapping class="com.java.resumecreation.peresisitance.ProfessionalExperience"></mapping> 
+        <mapping class="com.java.resumecreation.peresisitance.CertificationDetails"></mapping>
+        <mapping class="com.java.resumecreation.peresisitance.Publication"></mapping>
+        <mapping class="com.java.resumecreation.peresisitance.ReferencePerson"></mapping>
+        <mapping class="com.java.resumecreation.peresisitance.SocialMediaReference"></mapping>
+        
+       
+          
+    </session-factory>
+</hibernate-configuration>
